@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug CFD",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/SOD",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                { "name": "OMP_NUM_THREADS", "value": "6" },
+                { "name": "OMP_PROC_BIND", "value": "TRUE" },
+                { "name": "GOMP_CPU_AFFINITY", "value": "0-5" }
+            ],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",  // GDB
+            "setupCommands": [  // 
+                {
+                    "description": "enhance GDB output with pretty-printing",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build-SOD",  // 
+            "logging": {  // 
+                "engineLogging": true,
+                "trace": true
+            }
+        }
+    ]
+}

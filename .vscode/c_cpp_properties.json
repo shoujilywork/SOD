@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/include",
+                "/usr/include/eigen3",  // eigen3 folder
+                "/usr/include/c++/11",   // system C++ headers
+                "/usr/include/x86_64-linux-gnu/c++/11",
+                "/usr/include"
+            ],
+            "compilerPath": "/usr/bin/g++",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "configurationProvider": "ms-vscode.cmake-tools",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "/usr/include/eigen3"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}

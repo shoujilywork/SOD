@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-SOD",  // same as launch.json preLaunchTask
+            "type": "cppbuild",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-g",  // 
+                "-fopenmp",
+                "-I${workspaceFolder}/include",
+                "-I/usr/include/eigen3",
+                "${workspaceFolder}/src/main_omp.cpp",
+                "${workspaceFolder}/src/split.cpp",
+                "${workspaceFolder}/src/derivatives.cpp",
+                "${workspaceFolder}/src/nov_5.cpp",
+                "-o",
+                "${workspaceFolder}/build/SOD"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "SOD solver"
+        }
+    ]
+}
