@@ -7,7 +7,7 @@ This project implements a numerical solver for the **Sod shock tube problem**, a
 The Sod problem models a 1D in space and 4D in physical properties Riemann problem with a discontinuity in pressure and density, producing shock waves, rarefaction waves, and contact discontinuities.
 This solver numerically integrates the 1D Euler equations using a finite difference scheme.
 
-X direction is splitted into X-positive and X-negative
+X direction is splitted into X-positive and X-negative. 
 Physical dimensions are rho, p, E, and u.
 
 6 cores are used to calculate derivatives.
@@ -22,7 +22,6 @@ The code is designed to be:
 
 - Solves the 1D Euler equations (conservation of mass, momentum, and energy)
 - Initial conditions based on Sod's classical setup
-- Thomas algorithm support for tridiagonal matrix inversion (if used in implicit schemes)
 - OpenMP-powered parallel derivative computations across 6 cores
 - Adjustable parameters: spatial resolution, CFL condition, total time
 
